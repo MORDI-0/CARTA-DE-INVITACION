@@ -1,0 +1,29 @@
+SANTOS & FLOR — MÚSICA QUE SUENA SIN BOTÓN
+=======================================
+
+SOLUCIÓN: UNA SOLA PISTA DE VIDEO + MÚSICA
+- «Abrir invitación» inicia 1 solo video con audio desde un clic real.
+- Los primeros 4 segundos muestran la carta con silencio absoluto.
+- A los 4,04 segundos, empieza A Thousand Years (karaoke) dentro del propio MP4.
+- La invitación se muestra mientras esa misma pista sigue reproduciéndose detrás.
+- No existe ningún botón, reproductor de YouTube ni audio HTML por separado.
+- Al terminar la canción, el reproductor vuelve al comienzo musical, no al clip.
+- «Ver de nuevo la apertura» reinicia la reproducción y la animación.
+
+ARCHIVOS PRINCIPALES
+index.html / script.js / style.css: el diseño anterior, con el nuevo flujo de música.
+assets/apertura-con-musica.mp4: clip de apertura + canción con comienzo diferido.
+assets/: todas las fotografías, decoraciones y recursos originales.
+El MP3 original también se conserva como respaldo editable.
+
+PRUEBA
+1. EXTRAER todo el ZIP; no mezclar con versiones anteriores.
+2. Abrir index.html con Live Server o desde un hosting HTTP(S).
+3. Hacer clic en «Abrir invitación» y esperar los 4 segundos del video.
+4. Comprobar que el volumen del sistema/solapa web esté activado.
+
+RESTRICCIONES REALES
+Ningún sitio puede forzar audio si el teléfono está en silencio, se ha bloqueado
+el sonido o el navegador impide cualquier reproducción audible. Pero usar una
+única pista empezada con el clic evita el bloqueo de un segundo reproductor.
+El formulario de confirmación no guarda datos en la nube.

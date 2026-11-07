@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#F5F9FC">
+  <meta name="description" content="Santos y Flor te invitan a celebrar su matrimonio, el 9 de diciembre de 2026 en Sapallanga.">
+  <meta property="og:title" content="Santos & Flor | Nuestra boda">
+  <meta property="og:description" content="Una historia escrita para siempre · 09.12.2026">
+  <meta property="og:type" content="website">
+  <title>Santos & Flor — Nuestra boda · Azul y Blanco</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="assets/video-portada.webp">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body class="locked">
+  <a class="skip-content" href="#contenido">Ir al contenido</a>
+
+  <!-- INTRO: se reproduce exclusivamente después del clic del invitado. -->
+  <section class="intro" id="intro" aria-label="Abrir invitación de boda">
+    <div class="intro-ambient" aria-hidden="true"></div>
+    <div class="intro-orbit" aria-hidden="true"></div>
+    <div class="film-container" id="filmContainer">
+      <video id="openingVideo" class="opening-video" poster="assets/video-portada.webp" playsinline preload="metadata">
+        <source src="assets/apertura-con-musica.mp4" type="video/mp4">
+        Tu navegador no admite videos HTML5.
+      </video>
+    </div>
+    <div class="intro-shade" aria-hidden="true"></div>
+    <div class="intro-header">
+      <span class="intro-rule"></span>
+      <span>UNA INVITACIÓN ESPECIAL</span>
+      <span class="intro-rule"></span>
+    </div>
+    <div class="welcome" id="welcome">
+      <span class="welcome-epigraph">EL COMIENZO DE UNA ETERNIDAD</span>
+      <h1>Hay momentos<br><i>que merecen abrirse.</i></h1>
+      <p>La historia de Santos y Flor guarda un lugar para ti.</p>
+      <button type="button" id="openButton" class="button button-gold open-button">
+        <span>Abrir invitación</span><span class="button-arrow" aria-hidden="true">↗</span>
+      </button>
+      <span class="welcome-sub">TOCA PARA DESCUBRIR NUESTRA HISTORIA</span>
+    </div>
+    <div class="playback-ui" id="playbackUi" aria-live="polite" aria-hidden="true">
+      <span class="playback-caption">ABRIENDO NUESTRA HISTORIA</span>
+      <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+      <span class="progress-number" id="progressNumber">0%</span>
+    </div>
+    <div class="intro-controls">
+
+      <button type="button" class="text-button" id="skipButton">Saltar introducción <span aria-hidden="true">↗</span></button>
+    </div>
+    <div class="ivory-transition" id="ivoryTransition" aria-hidden="true"></div>
+  </section>
+
+  <div class="site" id="site" aria-hidden="true">
+    <header class="site-header" id="siteHeader">
+      <a class="brand" href="#inicio" aria-label="Santos y Flor, ir al inicio"><span>S</span><span class="brand-amp">&</span><span>F</span></a>
+      <nav id="mainNav" class="nav-links" aria-label="Navegación principal">
+        <a href="#inicio">Inicio</a>
+        <a href="#fecha">El gran día</a>
+        <a href="#lugares">Lugares</a>
+        <a href="#familia">Familia</a>
+        <a class="nav-rsvp" href="#asistencia">Confirmar asistencia</a>
+      </nav>
+      <button type="button" class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mainNav" aria-label="Abrir menú"><span></span><span></span></button>
+    </header>
+
+    <main id="contenido">
+      <section class="hero section" id="inicio">
+        <div class="hero-gold-outline" aria-hidden="true"></div>
+        <img class="hero-flower hero-flower-left" src="assets/floral-esquina.webp" alt="" aria-hidden="true" fetchpriority="high">
+        <img class="hero-flower hero-flower-right" src="assets/floral-esquina.webp" alt="" aria-hidden="true" fetchpriority="high">
+        <div class="hero-content">
+          <p class="eyebrow hero-label fade-in">CON LA BENDICIÓN DE DIOS</p>
+          <div class="ornament-separator fade-in" aria-hidden="true"><span></span><b>✦</b><span></span></div>
+          <p class="hero-overline fade-in">TENEMOS EL HONOR DE INVITARTE A NUESTRO MATRIMONIO</p>
+          <h1 class="hero-names fade-in"><span>Santos</span><em>&</em><span>Flor</span></h1>
+          <p class="hero-poem fade-in">Dos corazones, una promesa<br>y una historia por compartir.</p>
+          <div class="hero-date-line fade-in"><span>MIÉRCOLES</span><strong>09 · 12 · 2026</strong><span>SAPALLANGA</span></div>
+          <a href="#fecha" class="hero-next fade-in" aria-label="Deslizar para ver más"><span>DESCUBRE NUESTRA CELEBRACIÓN</span><span class="down-arrow" aria-hidden="true">↓</span></a>
+        </div>
+        <div class="hero-corner hero-corner-tl" aria-hidden="true">❧</div><div class="hero-corner hero-corner-br" aria-hidden="true">❧</div>
+      </section>
+
+      <section class="quote-section section" aria-label="Un mensaje para nuestros invitados">
+        <div class="quote-glow" aria-hidden="true"></div>
+        <div class="section-inner narrow reveal">
+          <p class="eyebrow light-eyebrow">UNA HISTORIA PARA SIEMPRE</p>
+          <div class="tiny-ornament" aria-hidden="true">✦</div>
+          <blockquote>“El amor se convierte en eternidad cuando decidimos caminar juntos.”</blockquote>
+          <p class="quote-footer">SANTOS <span>✧</span> FLOR</p>
+        </div>
+      </section>
+
+      <section class="date-section section" id="fecha">
+        <img class="date-floral date-floral-left" src="assets/floral-ramita.webp" alt="" aria-hidden="true" loading="lazy">
+        <img class="date-floral date-floral-right" src="assets/floral-ramita.webp" alt="" aria-hidden="true" loading="lazy">
+        <div class="section-inner reveal">
+          <p class="eyebrow">RESERVA ESTA FECHA</p>
+          <h2 class="section-title">Nuestro <em>gran día</em></h2>
+          <div class="section-divider" aria-hidden="true"><span></span><b>✦</b><span></span></div>
+          <div class="date-showcase">
+            <span class="date-month">DICIEMBRE</span>
+            <div class="date-number">09</div>
+            <span class="date-year">MIÉRCOLES · 2026</span>
+          </div>
+          <p class="date-caption">Cada día que pasa nos acerca a nuestro «sí, acepto».</p>
+          <div class="countdown" aria-label="Cuenta regresiva para la boda" id="countdown">
+            <div class="count-item"><strong id="days">--</strong><span>DÍAS</span></div>
+            <div class="count-item"><strong id="hours">--</strong><span>HORAS</span></div>
+            <div class="count-item"><strong id="minutes">--</strong><span>MINUTOS</span></div>
+            <div class="count-item"><strong id="seconds">--</strong><span>SEGUNDOS</span></div>
+          </div>
+          <button class="button button-outline" id="calendarButton" type="button">✧ &nbsp; Agregar al calendario</button>
+        </div>
+      </section>
+
+      <section class="letter-section section" aria-label="Una invitación escrita con amor">
+        <div class="section-inner letter-layout">
+          <div class="letter-photo-area reveal" data-parallax>
+            <div class="letter-frame"></div>
+            <img class="letter-photo" src="assets/santos-flor-retrato.webp" loading="lazy" width="1086" height="1448" alt="Fotografía de Santos y Flor con vestimenta de boda y un ramo de rosas blancas">
+            <span class="photo-floating-label">NUESTRO GRAN DÍA</span>
+          </div>
+          <div class="letter-copy reveal">
+            <p class="eyebrow">CON TODO NUESTRO CARIÑO</p>
+            <h2 class="section-title align-left">Una invitación<br><em>desde el corazón.</em></h2>
+            <p>Con la bendición de Dios y de nuestros padres, queremos compartir contigo uno de los días más importantes de nuestras vidas.</p>
+            <p>Tu presencia hará de este momento un recuerdo que llevaremos siempre con nosotros.</p>
+            <span class="letter-signature">Santos &amp; Flor</span>
+            <img class="letter-blossom" src="assets/floral-rosa-marfil.webp" alt="" aria-hidden="true" loading="lazy">
+          </div>
+        </div>
+      </section>
+
+      <section class="venues-section section" id="lugares">
+        <div class="section-inner">
+          <div class="reveal center-text">
+            <p class="eyebrow">ACOMPÁÑANOS A CELEBRAR</p>
+            <h2 class="section-title">Los lugares de<br><em>nuestra historia</em></h2>
+            <div class="section-divider" aria-hidden="true"><span></span><b>✦</b><span></span></div>
+          </div>
+          <div class="venue-grid">
+            <article class="venue-card reveal">
+              <img class="venue-bloom" src="assets/floral-rosa-azul.webp" alt="" aria-hidden="true" loading="lazy">
+              <div class="venue-icon" aria-hidden="true">
+                <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M10 53h44M14 53V25l18-15 18 15v28M26 53V39a6 6 0 0112 0v14M23 28h4m10 0h4M32 10V3m-5 4h10"/><path d="M20 53V29M44 53V29"/></svg>
+              </div>
+              <p class="card-kicker">01 / NUESTRA PROMESA</p>
+              <h3>Ceremonia <em>religiosa</em></h3>
+              <p class="venue-name">Iglesia Matriz<br>San Pedro de Sapallanga</p>
+              <p class="venue-time">10:00 a. m.</p>
+              <a class="venue-link" href="https://www.google.com/maps/search/?api=1&amp;query=Iglesia%20Matriz%20San%20Pedro%20de%20Sapallanga" target="_blank" rel="noopener noreferrer">Buscar en Google Maps <span aria-hidden="true">↗</span></a>
+            </article>
+            <article class="venue-card reveal">
+              <img class="venue-bloom venue-bloom-ivory" src="assets/floral-rosa-marfil.webp" alt="" aria-hidden="true" loading="lazy">
+              <div class="venue-icon" aria-hidden="true">
+                <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 54V29l19-15 19 15v25M7 54h50M20 54V37h24v17M24 14V8h16v6M27 8V4h10v4"/><path d="M14 31h36M26 37v17m12-17v17"/></svg>
+              </div>
+              <p class="card-kicker">02 / NUESTRA CELEBRACIÓN</p>
+              <h3>Recepción <em>especial</em></h3>
+              <p class="venue-name">Wallpa Wasi</p>
+              <p class="venue-address">Jr. Gonzales Prada, a dos cuadras de la comisaría de Sapallanga.</p>
+              <p class="venue-time venue-time-soft">Después de la ceremonia</p>
+              <a class="venue-link" href="https://www.google.com/maps/search/?api=1&amp;query=Wallpa%20Wasi%20Jr.%20Gonzales%20Prada%20Sapallanga" target="_blank" rel="noopener noreferrer">Buscar en Google Maps <span aria-hidden="true">↗</span></a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="family-section section" id="familia">
+        <div class="section-inner reveal">
+          <p class="eyebrow light-eyebrow">CON AMOR Y GRATITUD</p>
+          <h2 class="section-title light-title">Quienes nos <em>acompañan</em></h2>
+          <p class="family-intro">Con la bendición de Dios y el amor de nuestras familias.</p>
+          <div class="family-columns">
+            <div class="family-box">
+              <span class="family-rule"></span>
+              <h3>Nuestros padres</h3>
+              <p>Filomeno Remuzgo Balvín <span aria-label="En memoria">†</span></p>
+              <p>Rosa Núñez Camarena <span aria-label="En memoria">†</span></p>
+              <p>Martín Amable Mondargo</p>
+              <p>Domitila Flores Guerrero <span aria-label="En memoria">†</span></p>
+            </div>
+            <div class="family-box">
+              <span class="family-rule"></span>
+              <h3>Nuestros padrinos</h3>
+              <p>Fraño Huarcaya Carbajal</p>
+              <p>Lidia Vito Gavilán</p>
+              <p class="family-note">Gracias por acompañarnos en este día tan especial.</p>
+            </div>
+          </div>
+          <div class="family-symbol" aria-hidden="true">❦</div>
+          <img class="family-flowers" src="assets/floral-bouquet.webp" alt="" aria-hidden="true" loading="lazy">
+        </div>
+      </section>
+
+      <section class="details-section section" aria-label="Tres momentos de nuestra historia">
+        <img class="moments-flower moments-flower-left" src="assets/floral-rosa-azul.webp" alt="" aria-hidden="true" loading="lazy">
+        <img class="moments-flower moments-flower-right" src="assets/floral-ramita.webp" alt="" aria-hidden="true" loading="lazy">
+        <div class="section-inner reveal">
+          <p class="eyebrow">TRES INSTANTES · UN MISMO AMOR</p>
+          <h2 class="section-title">Cada detalle,<br><em>con mucho amor</em></h2>
+          <div class="section-divider" aria-hidden="true"><span></span><b>✦</b><span></span></div>
+          <p class="moment-intro">Pequeños instantes que guardamos para siempre.</p>
+
+          <!-- Fotos proporcionadas por los novios: se muestran completas y sin recortes. -->
+          <div class="moments-gallery" id="momentsGallery" tabindex="0" role="region" aria-roledescription="Galería de fotos" aria-label="Tres momentos de Santos y Flor. Desliza a los lados para descubrirlos.">
+            <figure class="moment-card">
+              <img src="assets/momento-1.webp" loading="lazy" width="552" height="941" alt="Momento 1: Nuestro encuentro. Santos y Flor posan juntos con su ramo de boda">
+            </figure>
+            <figure class="moment-card">
+              <img src="assets/momento-2.webp" loading="lazy" width="541" height="941" alt="Momento 2: Nuestra promesa. Santos besa la frente de Flor">
+            </figure>
+            <figure class="moment-card">
+              <img src="assets/momento-3.webp" loading="lazy" width="574" height="941" alt="Momento 3: Nuestra historia continúa. Santos y Flor se abrazan">
+            </figure>
+          </div>
+          <div class="moments-controls" aria-label="Controles de la galería">
+            <button class="moments-arrow" id="momentsPrev" type="button" aria-label="Ver foto anterior">←</button>
+            <span id="momentsStatus" class="moments-status" aria-live="polite">01 <span>/</span> 03</span>
+            <button class="moments-arrow" id="momentsNext" type="button" aria-label="Ver foto siguiente">→</button>
+          </div>
+          <p class="detail-subtitle">Tres momentos. Una historia que apenas comienza.</p>
+        </div>
+      </section>
+
+      <section class="rsvp-section section" id="asistencia">
+        <img class="rsvp-flower rsvp-flower-top" src="assets/floral-esquina.webp" alt="" aria-hidden="true" loading="lazy">
+        <img class="rsvp-flower rsvp-flower-bottom" src="assets/floral-esquina.webp" alt="" aria-hidden="true" loading="lazy">
+        <div class="section-inner rsvp-inner reveal">
+          <p class="eyebrow">SERÁ UN HONOR CONTAR CONTIGO</p>
+          <h2 class="section-title">¿Nos <em>acompañas?</em></h2>
+          <p class="rsvp-intro">Tu presencia es nuestro mejor regalo. Cuéntanos si podrás compartir este momento con nosotros.</p>
+          <form class="rsvp-form" id="rsvpForm">
+            <label for="guestName">TU NOMBRE COMPLETO</label>
+            <input id="guestName" name="guestName" type="text" maxlength="85" autocomplete="name" placeholder="Escribe tu nombre" required>
+            <label for="attendance">¿PODRÁS ASISTIR?</label>
+            <select id="attendance" name="attendance" required>
+              <option value="" selected disabled>Selecciona una opción</option>
+              <option value="si">Sí, asistiré con mucho gusto</option>
+              <option value="no">No podré asistir</option>
+            </select>
+            <label for="guestMessage">MENSAJE PARA LOS NOVIOS <span class="optional-label">(OPCIONAL)</span></label>
+            <textarea id="guestMessage" name="guestMessage" rows="3" maxlength="280" placeholder="Unas palabras para Santos y Flor..."></textarea>
+            <button type="submit" class="button button-gold form-submit">Preparar mi confirmación <span aria-hidden="true">↗</span></button>
+            <p class="form-disclaimer">La confirmación se prepara en tu dispositivo. Después podrás compartirla con los organizadores; no se envía automáticamente.</p>
+          </form>
+          <div class="rsvp-result" id="rsvpResult" hidden aria-live="polite">
+            <p class="result-icon">✧</p>
+            <h3>¡Gracias por responder!</h3>
+            <p id="rsvpSummary"></p>
+            <div class="result-actions">
+              <button class="button button-gold" id="shareButton" type="button">Compartir confirmación</button>
+              <button class="button button-outline" id="copyButton" type="button">Copiar mensaje</button>
+              <button class="text-button result-back" id="editButton" type="button">Editar respuesta</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-ornament" aria-hidden="true">✦</div>
+      <p>GRACIAS POR SER PARTE DE NUESTRA HISTORIA</p>
+      <span class="footer-signature">Santos & Flor</span>
+      <p>09 DE DICIEMBRE DE 2026 · SAPALLANGA</p>
+      <button type="button" id="replayButton" class="footer-replay">↺ Ver de nuevo la apertura</button>
+    </footer>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  </div>
+</body>
+</html>
